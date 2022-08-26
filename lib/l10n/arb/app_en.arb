@@ -1,0 +1,13 @@
+{
+    "@@locale": "en",
+    "counterAppBarTitle": "Counter",
+    "@counterAppBarTitle": {
+        "description": "Text shown in the AppBar of the Counter Page"
+    },
+    "shoppingListAppBarTitle": "Shopping List",
+    "emptyListText": "Let's do shopping",
+    "addNewItemInstruction": "By pressing '+' sign button,\nadd new item in the list",
+    "addNewItemDialogTitle": "Add new item",
+    "add": "Add",
+    "cancel": "Cancel"
+}
