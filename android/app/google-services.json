@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "356550276106",
+    "firebase_url": "https://mobilab-shopping-app-default-rtdb.firebaseio.com",
+    "project_id": "mobilab-shopping-app",
+    "storage_bucket": "mobilab-shopping-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:356550276106:android:31134048fe712383591bf3",
+        "android_client_info": {
+          "package_name": "com.mobilab.shopping_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "356550276106-47uul2i2vv280e43e0ptbknrbe3p7flm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQ7El1i8E33w3xfhKZFQyv40QFy6ECe_Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "356550276106-47uul2i2vv280e43e0ptbknrbe3p7flm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

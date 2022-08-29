@@ -9,5 +9,13 @@
     "addNewItemInstruction": "By pressing '+' sign button,\nadd new item in the list",
     "addNewItemDialogTitle": "Add new item",
     "add": "Add",
-    "cancel": "Cancel"
+    "cancel": "Cancel",
+    "errorDialogTitle": "Unfortunate Error",
+    "okay": "Okay",
+    "commonErrorText": "Something went wrong!\nPlease try again",
+    "noInternetConnectionText": "No internet connection",
+    "addItemInputLabel": "Item name*",
+    "errorTextForShoppingItemName": "Please enter shopping item name",
+    "checkButtonText": "Check",
+    "shoppingNotCompletedText": "Please shop the remaining items."
 }
