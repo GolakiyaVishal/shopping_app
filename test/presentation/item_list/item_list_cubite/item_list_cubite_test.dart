@@ -67,23 +67,5 @@ void main() {
       act: (cubit) => cubit.addNewItem(ShoppingItem(name: 'Potato')),
       expect: () => [],
     );
-
-    // blocTest<ItemListCubit, ItemListState>(
-    //   'emits non when updateItem is called',
-    //   build: () => itemListCubit,
-    //   act: (cubit) => cubit.onItemCheckChange(
-    //     value: false,
-    //     item: ShoppingItem(name: 'Potato'),
-    //     index: 0,
-    //   ),
-    //   expect: () => [],
-    // );
-
-    // blocTest<ItemListCubit, ItemListState>(
-    //   'emits non when deleteItem is called',
-    //   build: MockItemListCubit.new,
-    //   act: (cubit) => cubit.onDeleteTap(0),
-    //   expect: () => [],
-    // );
   });
 }
