@@ -6,8 +6,7 @@ class AddNewItemState extends Equatable {
     required this.canAddItem,
   });
 
-  const AddNewItemState.empty()
-      :canAddItem = false;
+  const AddNewItemState.empty() : canAddItem = false;
 
   final bool canAddItem;
 

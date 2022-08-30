@@ -2,15 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:shopping_app/data/models/shopping_item.dart';
 import 'package:shopping_app/l10n/l10n.dart';
-import 'package:shopping_app/presentation/item_list/add_new_item/add_new_item_cubit.dart';
+import 'package:shopping_app/presentation/item_list/add_new_item/add_new_item_cubit/add_new_item_cubit.dart';
 
 Future<ShoppingItem?> showAddItemDialog(BuildContext context) {
   return showDialog<String>(
     context: context,
     builder: (context) => const AddNewItem(),
   ).then((value) {
-    if(value != null) {
-      final str = value.toString();
+    if (value != null) {
+      final str = value;
       if (str.isNotEmpty) {
         debugPrint('add item :: $value');
         return ShoppingItem(
@@ -24,7 +24,11 @@ Future<ShoppingItem?> showAddItemDialog(BuildContext context) {
 }
 
 /// [AddNewItem]
-/// Add new item dialog with TestField to enter text name
+/// Add new item dialog with TestField to enter sopping item name
+///
+/// Reason for stateful widget:
+/// According to suggested in bloc library, beast place to create a
+/// controller is initState of widget.
 
 class AddNewItem extends StatelessWidget {
   const AddNewItem({super.key});
@@ -39,14 +43,13 @@ class AddNewItem extends StatelessWidget {
 }
 
 class _DialogContent extends StatefulWidget {
-  const _DialogContent({super.key});
+  const _DialogContent();
 
   @override
   State<_DialogContent> createState() => _DialogContentState();
 }
 
 class _DialogContentState extends State<_DialogContent> {
-
   TextEditingController titleController = TextEditingController();
 
   @override

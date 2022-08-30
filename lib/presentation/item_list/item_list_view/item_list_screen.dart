@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:shopping_app/data/models/shopping_item.dart';
-import 'package:shopping_app/data/shopping_dao.dart';
+import 'package:shopping_app/data/shopping_repository.dart';
 import 'package:shopping_app/l10n/l10n.dart';
 import 'package:shopping_app/presentation/item_list/item_list_cubit/item_list_cubit.dart';
-import 'package:shopping_app/presentation/item_list/item_list_state/item_list_state.dart';
+import 'package:shopping_app/presentation/item_list/item_list_cubit/item_list_state.dart';
 import 'package:shopping_app/presentation/item_list/item_list_view/empty_list_view.dart';
 import 'package:shopping_app/presentation/item_list/item_list_view/item_tile.dart';
 import 'package:shopping_app/presentation/widgets/small_loader.dart';
@@ -19,7 +19,7 @@ class ItemListScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => ItemListCubit(ShoppingDao()),
+      create: (context) => ItemListCubit(ShoppingRepository())..getShoppingItems(),
       child: const ScreenContent(),
     );
   }
@@ -34,13 +34,12 @@ class ScreenContent extends StatelessWidget {
       appBar: AppBar(
         title: Text(context.l10n.shoppingListAppBarTitle),
         actions: [
-          if (context.watch<ItemListCubit>().state.isLoading)
+          if (UiStatus.loading == context.watch<ItemListCubit>().state.uiStatus)
             const Padding(
               padding: EdgeInsets.all(16),
               child: SmallLoader(),
             ),
-          if (!context.watch<ItemListCubit>().state.isLoading
-              && !context.watch<ItemListCubit>().state.isShowEmptyView)
+          if (UiStatus.loaded == context.watch<ItemListCubit>().state.uiStatus)
             TextButton(
               onPressed: () =>
                   context.read<ItemListCubit>().checkShoppingList(context),
@@ -63,19 +62,18 @@ class ScreenContent extends StatelessWidget {
       body: BlocBuilder<ItemListCubit, ItemListState>(
         builder: (context, itemListState) {
 
-          // for any error show error dialog
-          if (itemListState.error != null) {
-            Fluttertoast.showToast(
-                msg: itemListState.error ?? context.l10n.commonErrorText,);
-            // showErrorDialog(
-            //   context: context,
-            //   errorText: itemListState.error ?? context.l10n.commonErrorText,
-            // );
+          // onInitial state show empty view
+          if (UiStatus.initial ==
+              context.watch<ItemListCubit>().state.uiStatus) {
+            return const EmptyListView();
           }
 
-          // if item is not available then show the empty view
-          if (context.watch<ItemListCubit>().state.isShowEmptyView) {
-            return const EmptyListView();
+          // for any error show error dialog
+          if (itemListState.error != null) {
+            debugPrint('error:: ${itemListState.error}');
+            Fluttertoast.showToast(
+              msg: itemListState.error ?? context.l10n.commonErrorText,
+            );
           }
 
           return FirebaseAnimatedList(

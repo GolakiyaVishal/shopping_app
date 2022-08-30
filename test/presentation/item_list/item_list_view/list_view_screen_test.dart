@@ -30,12 +30,12 @@ void main() {
       expect(find.byType(FloatingActionButton), findsOneWidget);
     });
 
-    testWidgets(
-        'Add new item tap and add item dialog test', (widgetTester) async {
-        await widgetTester.pumpApp(const ItemListScreen());
-        await widgetTester.tap(find.byIcon(Icons.add));
-        await widgetTester.pump();
-        expect(find.byType(Dialog), findsOneWidget);
+    testWidgets('Add new item tap and add item dialog test',
+        (widgetTester) async {
+      await widgetTester.pumpApp(const ItemListScreen());
+      await widgetTester.tap(find.byIcon(Icons.add));
+      await widgetTester.pump();
+      expect(find.byType(Dialog), findsOneWidget);
     });
   });
 
@@ -396,12 +396,12 @@ void main() {
 
 class MockQuery extends Mock implements Query {
   MockQuery(
-      this.onChildAdded,
-      this.onChildRemoved,
-      this.onChildChanged,
-      this.onChildMoved,
-      this.onValue,
-      );
+    this.onChildAdded,
+    this.onChildRemoved,
+    this.onChildChanged,
+    this.onChildMoved,
+    this.onValue,
+  );
 
   @override
   final Stream<DatabaseEvent> onChildAdded;

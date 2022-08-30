@@ -28,7 +28,7 @@ $ flutter run --flavor staging --target lib/main_staging.dart
 $ flutter run --flavor production --target lib/main_production.dart
 ```
 
-_\*Shopping App only developed and tested with Android_
+_\*Shopping App only developed and tested with Android Emulator_
 
 ---
 
@@ -39,6 +39,13 @@ To run all unit and widget tests use the following command:
 ```sh
 $ flutter test --coverage --test-randomize-ordering-seed random
 ```
+
+---
+
+## Application architecture 📐
+
+Application code follows the BLOC pattern with VGV best practices.
+Application code has minimal external dependencies.
 
 ---
 

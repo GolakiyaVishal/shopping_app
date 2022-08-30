@@ -27,11 +27,13 @@ class EmptyListView extends StatelessWidget {
             style: textTheme.titleLarge,
           ),
           const SizedBox(height: 16),
-          Text(context.l10n.addNewItemInstruction,
+          Text(
+            context.l10n.addNewItemInstruction,
             textAlign: TextAlign.center,
             style: textTheme.bodySmall!.copyWith(
-            color: Colors.black54,
-          ),)
+              color: Colors.black54,
+            ),
+          )
         ],
       ),
     );

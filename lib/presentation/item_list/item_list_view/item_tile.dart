@@ -39,11 +39,10 @@ class ItemTile extends StatelessWidget {
                 ),
           ),
         ),
-        if (!(item.isSelected ?? false))
-          IconButton(
-            onPressed: onDeleteTap,
-            icon: const Icon(Icons.delete),
-          )
+        IconButton(
+          onPressed: onDeleteTap,
+          icon: const Icon(Icons.delete),
+        )
       ],
     );
   }

@@ -15,6 +15,88 @@
       },
       "oauth_client": [
         {
+          "client_id": "356550276106-dqi0oqd4a9ettm2af4ulvvo3krhs5dl0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mobilab.shopping_app",
+            "certificate_hash": "1f3373409416889018070ee51e39f9b305a022f9"
+          }
+        },
+        {
+          "client_id": "356550276106-47uul2i2vv280e43e0ptbknrbe3p7flm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQ7El1i8E33w3xfhKZFQyv40QFy6ECe_Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "356550276106-47uul2i2vv280e43e0ptbknrbe3p7flm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:356550276106:android:85f212e782ed5597591bf3",
+        "android_client_info": {
+          "package_name": "com.mobilab.shopping_app.dev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "356550276106-7fbl6d4tfmf5fs1ker64jshafqgrs876.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mobilab.shopping_app.dev",
+            "certificate_hash": "1f3373409416889018070ee51e39f9b305a022f9"
+          }
+        },
+        {
+          "client_id": "356550276106-47uul2i2vv280e43e0ptbknrbe3p7flm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQ7El1i8E33w3xfhKZFQyv40QFy6ECe_Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "356550276106-47uul2i2vv280e43e0ptbknrbe3p7flm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:356550276106:android:aec97d1803c03806591bf3",
+        "android_client_info": {
+          "package_name": "com.mobilab.shopping_app.stg"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "356550276106-k9kupd9cl1q5rr0eq8b2idaam1bhlovl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mobilab.shopping_app.stg",
+            "certificate_hash": "1f3373409416889018070ee51e39f9b305a022f9"
+          }
+        },
+        {
           "client_id": "356550276106-47uul2i2vv280e43e0ptbknrbe3p7flm.apps.googleusercontent.com",
           "client_type": 3
         }
